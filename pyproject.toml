@@ -1,0 +1,32 @@
+[project]
+name = "isic-skin-cancer"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "catboost>=1.2.10",
+    "einops>=0.8.2",
+    "h5py>=3.16.0",
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.4",
+    "kaggle>=2.2.4",
+    "lightgbm>=4.7.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pandas>=3.0.6",
+    "pillow>=12.3.0",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+    "torch>=2.10",
+    "torchvision",
+    "xgboost>=3.2.0",
+]
+
+# PyTorch with CUDA 12.8 (RTX 4050) instead of the CPU-only build from PyPI
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
+torchvision = [{ index = "pytorch-cu128" }]

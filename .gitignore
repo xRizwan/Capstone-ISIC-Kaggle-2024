@@ -1,0 +1,18 @@
+# data - ISIC 2024 is CC-BY-NC, link to Kaggle instead of committing it
+data/
+*.hdf5
+*.zip
+
+# python / uv
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# credentials
+kaggle.json
+
+# my own notes
+report_notes.md
+
+# catboost training logs
+catboost_info/
